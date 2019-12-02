@@ -1,20 +1,34 @@
 <template>
-  <div>  
-    <h1>Clicked {{ counter }} times</h1>
-    <button @click="iAmClicked()">Click me!</button>
+  <div>
+    <div>
+      <h1>Participants list</h1>
+      <ol>
+        <li>John Doe</li>
+        <li>Robin Hood</li>
+        <li>Chuck Norris</li>
+      </ol>
+    </div>
+
+    <h3>New participant</h3>
+    <form @submit.prevent="addNewParticipant()">
+      <label>Firstname</label>
+      <input type="text">
+      <label>Lastname</label>
+      <input type="text">
+      <button>Add new participant</button>
+    </form>
   </div>
 </template>
- 
-<script>
-    export default {
-        data() {
-            return {counter:0}
-        },
-        methods: {
-            iAmClicked() {
-                this.counter = this.counter + 1;
-            }
-        }
 
-    };
+<script>
+  export default {
+    data() {
+      return {};
+    },
+    methods: {
+      addNewParticipant() {
+        // dunno, what's next?
+      }
+    }
+  };
 </script>
